@@ -55,7 +55,7 @@ const photocard = () => {
       <AppLayout className="photocard">
         <header className="header common">
           {
-            photocardViewActivate ? <button type="button" className="btn-back" onClick={onClickBack}></button> : <Link href="/gallery"><a className="btn-back"></a></Link>
+            photocardViewActivate ? <button type="button" className="btn-back" onClick={onClickBack}></button> : <Link href={`${path}/gallery`}><a className="btn-back"></a></Link>
           }
           <button type="button" className={`btn-sound ${soundState ? 'active': ''}`} onClick={onClickSoundButton}></button>
         </header>

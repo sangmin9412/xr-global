@@ -71,21 +71,21 @@ const gallery = () => {
         <div className="title">
           <img src={`${path}/images/gallery_logo.png`} alt="" />
         </div>
-        <Link href="/"><a className="btn-back"></a></Link>
-        <Link href="/photocard"><a className={`btn-next-page ${completed ? 'active' : ''}`}></a></Link>
+        <Link href={`${path}/`}><a className="btn-back"></a></Link>
+        <Link href={`${path}/photocard`}><a className={`btn-next-page ${completed ? 'active' : ''}`}></a></Link>
       </header>
       <header className="header portrait">
         <div className="title">
           <img src={`${path}/images/gallery_logo_m.png`} alt="" />
         </div>
-        <Link href="/"><a className="btn-back"></a></Link>
-        <Link href="/photocard"><a className={`btn-next-page ${completed ? 'active' : ''}`}></a></Link>
+        <Link href={`${path}/`}><a className="btn-back"></a></Link>
+        <Link href={`${path}/photocard`}><a className={`btn-next-page ${completed ? 'active' : ''}`}></a></Link>
       </header>
       <header className="header landscape">
         <div className="title">{`${title} ${version == 2 ? '(Ver.2)' : ''}`}</div>
         {prev ? <button type="button" className="btn-prev" onClick={() => {onClickLandscapeButton(prev.idx)}}>{`< ${prev.title}`}</button> : null}
         {next ? <button type="button" className="btn-next" onClick={() => {onClickLandscapeButton(next.idx)}}>{`${next.title} >`}</button> : null}
-        {completed ? <Link href="/photocard"><a className="btn-next">next ></a></Link> : null}
+        {completed ? <Link href={`${path}/photocard`}><a className="btn-next">next ></a></Link> : null}
       </header>
 
       <div className="gallery-content">

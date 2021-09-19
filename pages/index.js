@@ -2,9 +2,12 @@ import Link from 'next/link';
 import { path } from '/config/config';
 import AppLayout from '../components/AppLayout';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
 
 import 'swiper/swiper-bundle.css';
 import { useEffect, useState } from 'react';
+
+SwiperCore.use([Pagination])
 
 const Home = () => {
   const [dday, setDday] = useState(["0"]);
@@ -35,7 +38,9 @@ const Home = () => {
         </div>
         <div className="slide-wrap">
           <Swiper
+            modules={[Pagination]}
             slidesPerView={1}
+            pagination={{ clickable: true }}
           >
               <SwiperSlide>
                 <p className="text">

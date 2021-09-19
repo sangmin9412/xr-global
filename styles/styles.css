@@ -229,14 +229,14 @@ html.download {
 	bottom: auto;
 	top: 0;
 }
-.main-content .slide-wrap .swiper-pagination-bullet {
+.main-content .slide-wrap .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
 	width: 0.85rem;
 	height: 0.85rem;
 	margin: 0 0.5rem;
 	background: #5c5c5c;
 	opacity: 1;
 }
-.main-content .slide-wrap .swiper-pagination-bullet-active {
+.main-content .slide-wrap .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
 	background: #ffc600;
 }
 .main-content .button-wrap {
@@ -728,7 +728,7 @@ body.download .wrap:before {
 	bottom: auto;
 	top: 0;
 }
-.pre-content .slide-wrap .swiper-pagination-bullet {
+.pre-content .slide-wrap .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
 	width: 1.7rem;
 	height: 1.7rem;
 	margin: 0 1rem;

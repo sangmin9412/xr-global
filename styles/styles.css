@@ -986,7 +986,8 @@ body.download .wrap:before {
 	}
 	.gallery-content .gallery-list .list-item:before {
 		width: 2.4rem;
-		transform: translate(-50%, calc(100% + 0.7rem));
+		/* transform: translate(-50%, calc(100% + 0.7rem)); */
+    margin-bottom: -0.7rem;
 	}
 	.gallery-content .gallery-list .list-item:after {
 		right: 2.6rem;

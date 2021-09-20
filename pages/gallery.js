@@ -85,7 +85,7 @@ const gallery = () => {
         <div className="title">{`${title} ${version == 2 ? '(Ver.2)' : ''}`}</div>
         {prev ? <button type="button" className="btn-prev" onClick={() => {onClickLandscapeButton(prev.idx)}}>{`< ${prev.title}`}</button> : null}
         {next ? <button type="button" className="btn-next" onClick={() => {onClickLandscapeButton(next.idx)}}>{`${next.title} >`}</button> : null}
-        {completed ? <Link href={`${path}/photocard`}><a className="btn-next">next ></a></Link> : null}
+        {(!next && completed) ? <Link href={`${path}/photocard`}><a className="btn-next">next ></a></Link> : null}
       </header>
 
       <div className="gallery-content">

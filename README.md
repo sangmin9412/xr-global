@@ -7,4 +7,4 @@
     - next-redux-wrapper
   - redux
     - immer
-- Site: <a href="https://sangmin9412.github.io/xr-global/" target="_blank">https://sangmin9412.github.io/xr-global/</a>
+- Site: <a href="https://sangmin9412.github.io/xr-global/" target="_blank">

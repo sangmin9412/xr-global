@@ -1,0 +1,119 @@
+<?php 
+
+$path = "/global";
+$cashever = "?ver=2021070103";
+
+function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="ko" class="<?=isset($pageClass) ? $pageClass : ''?>">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="/assets/images/favicon.ico"/>
+	<meta name="subject" content="EXO XR GALLERY">
+	<meta name="description" content="EXO XR GALLERY / EXO ONLINE GALLERY / EXO / EXO 컴백 / 엑소 컴백 / 엑소 / DON'T FIGHT THE FEELING / 도경수 / 시우민 / 세훈 / 백현 / 찬열 / 카이 / 엑소엘 / EXO-L / SM엔터테인먼트 / SM / U+VR / U+ / 엑소 스페셜 앨범 / 엑소 티저 / EXO-K / EXO-M /EXO-CBK">
+	<meta name="keywords" content="EXO XR GALLERY / EXO ONLINE GALLERY / EXO / EXO 컴백 / 엑소 컴백 / 엑소 / DON'T FIGHT THE FEELING / 도경수 / 시우민 / 세훈 / 백현 / 찬열 / 카이 / 엑소엘 / EXO-L / SM엔터테인먼트 / SM / U+VR / U+ / 엑소 스페셜 앨범 / 엑소 티저 / EXO-K / EXO-M /EXO-CBK">
+	<meta property="og:url"	content="http://international-xr-gallery.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EXO XR GALLERY">
+	<meta property="og:description"	content="EXO XR GALLERY / EXO ONLINE GALLERY">
+	<meta property="og:image" content="<?=$path?>/assets/images/og_img.png<?=$cashever?>">
+	<meta property="og:site_name" content="EXO XR GALLERY" />
+	<link rel="canonical" href="http://international-xr-gallery.com" />
+	<title>EXO XR GALLERY</title>
+	<link rel="stylesheet" href="<?=$path?>/assets/js/plugins/swiper.min.css">
+	<link rel="stylesheet" href="<?=$path?>/assets/css/styles.css<?=$cashever?>">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="<?=$path?>/assets/js/plugins/swiper.min.js"></script>
+	<script src="<?=$path?>/assets/js/gallery.js<?=$cashever?>"></script>
+	<script src="<?=$path?>/assets/js/photocard.js<?=$cashever?>"></script>
+	<script src="<?=$path?>/assets/js/jquery.js<?=$cashever?>"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MKTV8R396T"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-MKTV8R396T');
+	</script>
+
+	<script>
+			//var type = navigator.appName;
+			//var lang;
+			//if (type == "Netscape") {
+				//lang = navigator.language;
+			//} else {
+				//lang = navigator.userLanguage;
+			//}
+
+			//lang = lang.substr(0,2);
+
+			//var ip = "<?php echo get_client_ip() ?>";
+
+			//if (lang == "ko") {
+				//if (
+					//ip == "1.235.220.2" || 
+					//ip == "1.235.220.2" || 
+					//ip == "106.242.215.21" || 
+					//ip == "125.141.4.94" || 
+					//ip == "218.239.53.227" ||
+					//ip == "115.95.31.125"
+				//) {
+				
+				//} else {
+					//alert("죄송합니다.\n해당 페이지는 대한민국에서 접근하실 수 없으므로, 'U+VR'앱을 통해 이용부탁드립니다.\n\n[EXO XR Gallery 이용방법]\n1. 구글 플레이스토어에 'U+VR' 검색 후 다운로드\n2. 'U+VR' 앱 접속\n3. 메인화면 '<XR Gallery> 입장하기' 클릭");
+					//setTimeout(function(){
+						//$(".wrap").remove();
+					//}, 1);
+				//}; 
+			//}
+	</script>
+
+</head>
+<!-- <body oncontextmenu="return false" ondragstart="return false" class="<?=isset($pageClass) ? $pageClass : ''?>"> -->
+<body class="<?=isset($pageClass) ? $pageClass : ''?>">
+
+<div class="modal-wrap" data-modal="ie">
+	<div class="modal-body">
+		<div class="modal-content">
+			<p class="text">
+				Sorry. this website isn’t currently supported on Internet Explorer.<br>
+				Please try on Google Chrome.
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	var ie_check = navigator.userAgent;
+	
+	if (ie_check.indexOf("rv:11.0") > -1) {
+		document.querySelector("[data-modal='ie']").classList.add("active");
+		document.querySelector("body").classList.add("ie");
+	}
+</script>

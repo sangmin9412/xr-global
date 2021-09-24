@@ -1,0 +1,39 @@
+<?php
+	
+$pageClass = "photocard";
+
+?>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'] ."/global/assets/includes/head.html" ?>
+
+<div class="wrap">
+	<header class="header common">
+		<a class="btn-back"></a>
+		<button type="button" class="btn-sound"></button>
+	</header>
+	<div class="photocard-wrap"></div>
+</div>
+
+<div class="modal-wrap" data-modal="f" data-modal-type="alert">
+	<div class="modal-body">
+		<div class="modal-content">
+			<p class="text">
+				Now playing : '지켜줄게(Just as usual) - EXO'<br>
+				<br>
+				To turn off the music,<br>
+				press the speaker button
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	var modal_alert = new modal("f"); // alert
+	modal_alert.open();
+	modal_alert.callback = function () {
+		photocard.bgSound.play();
+	};
+</script>
+
+</body>
+</html>

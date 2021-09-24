@@ -1,0 +1,17 @@
+<?php
+	$num = $_GET["num"];
+	$rNum = $_GET["rNum"];
+?>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'] ."/global/assets/includes/head.html" ?>
+
+<div class="download-content" id="content">
+	<div class="download-img <?=$num?>">
+		<img src="<?=$path?>/assets/images/download_item_<?=$num?>_<?=$rNum?>.jpg<?=$cashever?>" alt="">
+	</div>
+	<div class="button-wrap">
+		<a href="<?=$path?>/assets/download/exo_photo_no_<?=$num?>_<?=$rNum?>.jpg" class="download-btn" data-num="<?=$num?>" download>
+			<span>Download</span>
+		</a>
+	</div>
+</div>

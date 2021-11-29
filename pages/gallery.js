@@ -32,7 +32,7 @@ const gallery = () => {
 
       dispatch({
         type: SET_GALLERY_DATA,
-        data: galleryDataFilter(),
+        data: galleryDataFilter(0),
         idx: 2,
       });
 
@@ -44,7 +44,7 @@ const gallery = () => {
       // 쿠키에 시청했던 영상 데이터가 없을 경우
       dispatch({
         type: SET_GALLERY_DATA,
-        data: galleryDataFilter(),
+        data: galleryDataFilter(0),
         idx: 2,
       });
 

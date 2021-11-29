@@ -77,7 +77,7 @@ const Home = () => {
           </Swiper>
         </div>
         <div className="button-wrap">
-          <Link href={`${path}/gallery`}>
+          <Link href={`/gallery`} as={`${path}/gallery`}>
             <a className="button">
               <span>ENTER</span>
             </a>

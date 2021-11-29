@@ -1,0 +1,2 @@
+git subtree split <--- cmd 나 powershell 로 입력시 실행안되는 경우가 있음.
+Next js github pages로 배포시 Link는 as를 통해서 github repository 경로로 지정해야 함.

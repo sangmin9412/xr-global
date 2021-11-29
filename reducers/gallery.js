@@ -28,12 +28,18 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       break;
     case SET_CURRENT_VIDEO:
       let idx = null;
+      let actionIdx = action.idx;
+      if (!draft.watchVideos.includes(actionIdx)) {
+        actionIdx = 7;
+      }
+
       const obj = draft.gallerys.filter((v, i) => {
-        if (v.idx === action.idx) {
+        if (v.idx === actionIdx) {
           idx = i
           return v;
         }
       })[0];
+
       obj.prev = null;
       obj.next = null;
       if (draft.gallerys[idx-1]) {

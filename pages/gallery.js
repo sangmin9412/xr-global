@@ -33,7 +33,7 @@ const gallery = () => {
       dispatch({
         type: SET_GALLERY_DATA,
         data: galleryDataFilter(0),
-        idx: 2,
+        idx: 0,
       });
 
       dispatch({
@@ -45,7 +45,7 @@ const gallery = () => {
       dispatch({
         type: SET_GALLERY_DATA,
         data: galleryDataFilter(0),
-        idx: 2,
+        idx: 0,
       });
 
       dispatch({

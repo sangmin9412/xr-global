@@ -13,7 +13,10 @@ const Home = () => {
   const [dday, setDday] = useState(["0"]);
   useEffect(() => {
     const _now = new Date();
-    const _dday = new Date("2021-10-31");
+    const _ddayYear = _now.getFullYear();
+    const _ddayMonth = (_now.getMonth() + 1).toString().padStart(2, "0");
+    const _ddayDay = _now.getDate().toString().padStart(2, "0");
+    const _dday = new Date(`${_ddayYear}-${_ddayMonth}-${_ddayDay}`);
     const gap = _now.getTime() - _dday.getTime();
     const result = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;
 
